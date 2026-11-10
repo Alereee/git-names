@@ -3,73 +3,80 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="index.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta name="description" content="Orange — сантехника и мебель для ванной комнаты. Качественные смесители, мебель и фаянс для дома." />
         <title>Сантехника для ванной — Orange</title>
     </head>
     <body>
         <div class="container dark-gray-back">
             <div class="wrapper">
-                <header>
+                <header class="site-header">
                     <div class="header-left">
-                        <img src="content/buttons/logo.svg" alt="Orange" />
+                        <a href="#top" aria-label="Orange, перейти на главную страницу">
+                            <img src="content/buttons/logo.svg" alt="Orange" />
+                        </a>
                         <span class="header-title light-gray-2">Сантехника для всех</span>
                     </div>
                     <div class="header-right">
-                        <img src="content/icons/iphone(1).svg" alt="" />
-                        <span class="header-phone light-gray-1">+7 (905) 543 23 45</span>
-                        <img class="header-search gray-border" src="content/icons/search 1.svg" alt="" />
+                        <a class="header-phone-link" href="tel:+79055432345" aria-label="Позвонить по телефону +7 905 543 23 45">
+                            <img src="content/icons/iphone(1).svg" alt="" aria-hidden="true" />
+                            <span class="header-phone light-gray-1">+7 (905) 543 23 45</span>
+                        </a>
+                        <button class="header-search gray-border" type="button" aria-label="Поиск по сайту">
+                            <img src="content/icons/search 1.svg" alt="" aria-hidden="true" />
+                        </button>
                     </div>
                 </header>
 
-                <main class="description wrapper">
-                    <div class="description-left">
+                <main class="description wrapper" id="top">
+                    <section class="description-left" id="about" aria-labelledby="hero-title">
                         <div class="description-left-upper">
-                            <div class="description-title">
+                            <h1 id="hero-title" class="description-title">
                                 Сантехника и мебель для ванной комнаты
-                            </div>
-                            <div class="description-menu">
+                            </h1>
+                            <nav class="description-menu" aria-label="Основное меню">
                                 <div class="description-menu-item">
-                                    <div class="description-menu-content description-company">
-                                        <img src="content/icons/Vector.svg" alt="" />
+                                    <a class="description-menu-content description-company" href="#about">
+                                        <img src="content/icons/Vector.svg" alt="" aria-hidden="true" />
                                         <span class="light-gray-3">О компании</span>
-                                    </div>
-                                    <div class="description-menu-line"></div>
+                                    </a>
+                                    <div class="description-menu-line" aria-hidden="true"></div>
                                 </div>
                                 <div class="description-menu-item">
-                                    <div class="description-menu-content description-product">
-                                        <img src="content/icons/Vector.svg" alt="" />
+                                    <a class="description-menu-content description-product" href="#products">
+                                        <img src="content/icons/Vector.svg" alt="" aria-hidden="true" />
                                         <span class="light-gray-3">О продукции</span>
-                                    </div>
-                                    <div class="description-menu-line"></div>
+                                    </a>
+                                    <div class="description-menu-line" aria-hidden="true"></div>
                                 </div>
                                 <div class="description-menu-item">
-                                    <div class="description-menu-content description-goods">
-                                        <img src="content/icons/Vector.svg" alt="" />
+                                    <a class="description-menu-content description-goods" href="#catalog">
+                                        <img src="content/icons/Vector.svg" alt="" aria-hidden="true" />
                                         <span class="light-gray-3">Каталог товаров</span>
-                                    </div>
+                                    </a>
                                 </div>
-                            </div>
+                            </nav>
                         </div>
-                        <div class="description-menu-footer">
-                            <div class="description-menu-footer-item gray-back"></div>
-                            <div class="description-menu-footer-item gray-back"></div>
-                            <div class="description-menu-footer-item gray-back"></div>
+                        <div class="description-menu-footer" aria-label="Навигационные точки">
+                            <div class="description-menu-footer-item gray-back" aria-hidden="true"></div>
+                            <div class="description-menu-footer-item gray-back" aria-hidden="true"></div>
+                            <div class="description-menu-footer-item gray-back" aria-hidden="true"></div>
                         </div>
-                    </div>
-                    <div class="description-right">
+                    </section>
+                    <div class="description-right" aria-label="Популярный товар">
                         <div class="description-price price-button price-button-big">от 4 990 ₽</div>
-                        <img class="description-tap" src="content/tap1.png" alt="Смеситель Orange" />
+                        <img class="description-tap" src="content/tap1.png" alt="Смеситель Orange в современном дизайне" />
                     </div>
                 </main>
 
             </div>
         </div>
 
-        <div class="container light-gray-back">
+        <section class="container light-gray-back" aria-labelledby="about-company-title">
             <div class="description-intro wrapper">
                 <div class="intro-orange">
                     <div class="intro-orange-content">
-                        <span class="intro-first-letter orange">O</span>
+                        <span class="intro-first-letter orange" aria-hidden="true">O</span>
                         <div>
                             <span class="intro-first-title orange">range</span> — фирма, которая заботится о комфорте и стиле вашей ванной комнаты. Доставка по всему миру.
                         </div>
@@ -78,77 +85,77 @@
                         Мы предлагаем качественную продукцию, которая полностью изготавливается по вашим запросам.
                     </p>
                 </div>
-                <div class="intro-features">
+                <div class="intro-features" id="about-company-title">
                     <div class="intro-feature">
-                        <img src="content/production.svg" alt="" />
+                        <img src="content/production.svg" alt="" aria-hidden="true" />
                         <div class="intro-feature-content">
-                            <p class="intro-feature-content-title">Cобственное производство</p>
+                            <h2 class="intro-feature-content-title">Собственное производство</h2>
                             <p>Выский уровнень технологий позволяет гарантировать качество продукции на протяжении 10 лет</p>
                         </div>
                     </div>
                     <div class="intro-feature">
-                        <img src="content/ecology.svg" alt="" />
+                        <img src="content/ecology.svg" alt="" aria-hidden="true" />
                         <div class="intro-feature-content">
-                            <p class="intro-feature-content-title">Экологичность и доступность</p>
+                            <h2 class="intro-feature-content-title">Экологичность и доступность</h2>
                             <p>Уникальный состав сплава делает продукцию Orange безопасной для потребителя</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </section>
 
-        <div class="container">
+        <section class="container" id="products" aria-labelledby="products-title">
             <div class="wrapper products-container">
-                <div class="products-title">
+                <h2 class="products-title" id="products-title">
                     Наша продукция
-                </div>
+                </h2>
                 <div class="products">
-                    <div class="product">
+                    <article class="product">
                         <div class="product-name">Смесители</div>
                         <img src="content/catalog/Mask Group.png" alt="Смесители Orange" />
-                    </div>
-                    <div class="product">
+                    </article>
+                    <article class="product">
                         <span class="product-name">Мебель</span>
                         <img src="content/catalog/Mask Group-1.png" alt="Мебель для ванной комнаты Orange" />
-                    </div>
-                    <div class="product">
+                    </article>
+                    <article class="product">
                         <span class="product-name">Душевая программа</span>
                         <img src="content/catalog/Mask Group-2.png" alt="Душевая программа Orange" />
-                    </div>
-                    <div class="product">
+                    </article>
+                    <article class="product">
                         <span class="product-name">Фаянс</span>
                         <img src="content/catalog/Mask Group-3.png" alt="Сантехнический фаянс Orange" />
-                    </div>
+                    </article>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="container collections dark-gray-back">
+        <section class="container collections dark-gray-back" id="collections" aria-labelledby="collections-title">
             <div class="collections-content">
                 <div class="collections-top">
-                    <p class="collections-title">Коллекции</p>
+                    <h2 class="collections-title" id="collections-title">Коллекции</h2>
                     <p>Чувственность и элегантность, пуризм и эксклюзивность, а может уют и романтичность? Наши коллекции, разработанные лучшими дизайнерами отрасли, помогут создать вам именно ту атмосферу ванной комнаты, которую вы всегда искали.</p>
                 </div>
                 <div class="collections-bottom">
-                    <div class="description-menu-line"></div>
-                    <div class="collections-all">
-                        <img src="content/icons/Vector.svg" alt="" />
+                    <div class="description-menu-line" aria-hidden="true"></div>
+                    <a class="collections-all" href="#catalog" aria-label="Посмотреть все коллекции">
+                        <img src="content/icons/Vector.svg" alt="" aria-hidden="true" />
                         <span>Все коллекции</span>
-                    </div>
+                    </a>
                 </div>
             </div>
-            <div class="collections-img">
+            <div class="collections-img" aria-label="Коллекция Aristo">
                 <span class="collections-img-title">ARISTO</span>
                 <span class="collections-button price-button price-button-big">от 4 990 ₽</span>
                 <img src="content/tap3.png" alt="Смеситель из коллекции Aristo" />
             </div>
-        </div>
+        </section>
         
-        <div class="container">
+        <section class="container" id="catalog" aria-labelledby="catalog-title">
             <div class="wrapper goods">
-                <div class="goods-title">Акционные товары</div>
+                <h2 class="goods-title" id="catalog-title">Акционные товары</h2>
                 <div class="goods-items">
-                    <div class="good">
+                    <article class="good">
                         <div class="good-upper">
                             <div class="good-img">
                                 <img src="content/goods/image 2.1 2.png" alt="Зеркальный шкаф O-mebel со светом Лотос" />
@@ -162,9 +169,9 @@
                             <span class="good-price-normal">5 990 ₽</span>
                             <span class="good-price-discount">6 499 ₽</span>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="good">
+                    <article class="good">
                         <div class="good-upper">
                             <div class="good-img">
                                 <img src="content/goods/image 2.1-1.png" alt="Однорычажный смеситель Orange Berti для раковины" />
@@ -176,9 +183,9 @@
                         <div class="good-price">
                             <span class="good-price-normal">4 090 ₽</span>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="good">
+                    <article class="good">
                         <div class="good-upper">
                             <div class="good-img">
                                 <img src="content/goods/image 2.1-2.png" alt="Ванно-душевой смеситель Orange Berti" />
@@ -190,9 +197,9 @@
                         <div class="good-price">
                             <span class="good-price-normal">5 490 ₽</span>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="good">
+                    <article class="good">
                         <div class="good-upper">
                             <div class="good-img">
                                 <img src="content/goods/image 2.1-3.png" alt="Ручной душ Orange O-Shower OS05" />
@@ -206,134 +213,124 @@
                             <span class="good-price-normal">1 100 ₽</span>
                             <span class="good-price-discount">1 990 ₽</span>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="container light-gray-back">
+        <section class="container light-gray-back" id="advantages" aria-labelledby="advantages-title">
             <div class="advantages">
-                <div class="advantages-title">Наши преимущества</div>
+                <h2 class="advantages-title" id="advantages-title">Наши преимущества</h2>
                 <div class="advantages-items">
-                    <div class="advantage">
-                       
-                        <img src="content/buttons/payment.svg" alt="" />
-                        
+                    <article class="advantage">
+                        <img src="content/buttons/payment.svg" alt="" aria-hidden="true" />
                         <div class="advantage-lower">
-                            <div class="advantage-title">
-                                Бесплатный возврат
-                            </div>
-                            <div class="advantage-description">
+                            <h3 class="advantage-title">Бесплатный возврат</h3>
+                            <p class="advantage-description">
                                 Если товар вам не подходит, вы можете вернуть его в течении 30 дней.
-                            </div>
+                            </p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="advantage">
-                       
-                        <img src="content/buttons/quality.svg" alt="" />
-                      
+                    <article class="advantage">
+                        <img src="content/buttons/quality.svg" alt="" aria-hidden="true" />
                         <div class="advantage-lower">
-                            <div class="advantage-title">
-                                Гарантия 10 лет
-                            </div>
-                            <div class="advantage-description">
+                            <h3 class="advantage-title">Гарантия 10 лет</h3>
+                            <p class="advantage-description">
                                 Стандарты ISO9001 и двойной контроль качества гарантируют долгосрочную безупречную работу изделий.
-                            </div>
+                            </p>
                         </div>
-                    </div>
+                    </article>
 
-                    <div class="advantage">
-                     
-                        <img src="content/buttons/security.svg" alt="" />
-                        
+                    <article class="advantage">
+                        <img src="content/buttons/security.svg" alt="" aria-hidden="true" />
                         <div class="advantage-lower">
-                            <div class="advantage-title">
-                                Безопасная оплата
-                            </div>
-                            <div class="advantage-description">
-                                Банковской картой или наличными при получении. 
-                            </div>
+                            <h3 class="advantage-title">Безопасная оплата</h3>
+                            <p class="advantage-description">
+                                Банковской картой или наличными при получении.
+                            </p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="container light-gray-back orange-bottom">
+        <div class="container light-gray-back orange-bottom" aria-label="Фирменная цитата">
             <div class="orange-bottom-text">ORANGE — это строгий, тщательно продуманный дизайн<br/> и подлинные немецкие традиции.</div>
-            <img class="orange-bottom-img" src="content/tap2.png" alt="" />
+            <img class="orange-bottom-img" src="content/tap2.png" alt="Смеситель Orange на фоне акцентной фотографии" />
         </div>
 
-        <div class="container dark-gray-back-2">
+        <footer class="container dark-gray-back-2" aria-label="Подвал сайта">
             <div class="wrapper orange-footer-wrapper">
-                <footer class="orange-footer">
+                <div class="orange-footer">
                     <div class="orange-footer-item">
                         <img src="content/buttons/logo.svg" alt="Orange" />
                     </div>
-                    <div class="orange-footer-item">
+                    <nav class="orange-footer-item" aria-label="Компания">
                         <div class="orange-footer-menu-item">
-                            <img src="content/icons/Vector.svg" alt="" />
-                            <span>О компании</span>
+                            <img src="content/icons/Vector.svg" alt="" aria-hidden="true" />
+                            <a href="#about"><span>О компании</span></a>
                         </div>
                         <div class="orange-footer-menu-item orange-upper-margin orange-bottom-margin">
-                            <img src="content/icons/Vector.svg" alt="" />
-                            <span>Сотрудничество</span>
+                            <img src="content/icons/Vector.svg" alt="" aria-hidden="true" />
+                            <a href="#products"><span>Сотрудничество</span></a>
                         </div>
                         <div class="orange-footer-menu-item">
-                            <img src="content/icons/Vector.svg" alt="" />
-                            <span>Покупателям</span>
+                            <img src="content/icons/Vector.svg" alt="" aria-hidden="true" />
+                            <a href="#catalog"><span>Покупателям</span></a>
                         </div>
-                    </div>
-                    <div class="orange-footer-item">
+                    </nav>
+                    <nav class="orange-footer-item" aria-label="Поддержка">
                         <div class="orange-footer-menu-item">
-                            <img src="content/icons/Vector.svg" alt="" />
-                            <span>Где купить</span>
+                            <img src="content/icons/Vector.svg" alt="" aria-hidden="true" />
+                            <a href="#collections"><span>Где купить</span></a>
                         </div>
                         <div class="orange-footer-menu-item orange-upper-margin orange-bottom-margin">
-                            <img src="content/icons/Vector.svg" alt="" />
-                            <span>Сервисное обслуживание</span>
+                            <img src="content/icons/Vector.svg" alt="" aria-hidden="true" />
+                            <a href="#advantages"><span>Сервисное обслуживание</span></a>
                         </div>
                         <div class="orange-footer-menu-item">
-                            <img src="content/icons/Vector.svg" alt="" />
-                            <span>Контакты</span>
+                            <img src="content/icons/Vector.svg" alt="" aria-hidden="true" />
+                            <a href="#top"><span>Контакты</span></a>
                         </div>
-                    </div>
-                    <div class="orange-footer-item">
+                    </nav>
+                    <address class="orange-footer-item">
                         <div class="orange-menu-title">Есть вопросы?</div>
                         <div class="orange-footer-menu-item orange-upper-margin">
-                            <img src="content/icons/mail.svg" alt="" />
-                            hello@orangemixers.ru
+                            <img src="content/icons/mail.svg" alt="" aria-hidden="true" />
+                            <a href="mailto:hello@orangemixers.ru">hello@orangemixers.ru</a>
                         </div>
                         <div class="orange-footer-menu-item orange-upper-margin">
-                            <img src="content/icons/iphone.svg" alt="" />
-                            +7 (495) 543 23 45
+                            <img src="content/icons/iphone.svg" alt="" aria-hidden="true" />
+                            <a href="tel:+74955432345">+7 (495) 543 23 45</a>
                         </div>
-                    </div>
+                    </address>
                     <div class="orange-footer-item">
                         <div class="orange-menu-title">Мы в соцсетях</div>
                         <div class="orange-footer-menu-item orange-upper-margin">
-                            <img src="content/icons/social.svg" alt="" />
-                            @orange_home
+                            <img src="content/icons/social.svg" alt="" aria-hidden="true" />
+                            <a href="#top">@orange_home</a>
                         </div>
                     </div>
-                </footer>
+                </div>
 
-                <footer class="orange-copyright">
+                <div class="orange-copyright">
                     <div class="orange-copyright-text">
                         &#169; 2019 Orange Mixers
                     </div>
                     <div class="orange-copyright-developed-by">
                         Разработано в bitberry.ru
                     </div>
-                </footer>
+                </div>
             </div>
-        </div>
+        </footer>
 
-        <div class="container bottom-line"></div>
+        <div class="container bottom-line" aria-hidden="true"></div>
 
-        <div class="container arrow-up dark-gray-back-2">
-            <img src="content/icons/arrow_up.svg" alt="" />
+        <div class="container arrow-up dark-gray-back-2" aria-label="Наверх">
+            <a href="#top" aria-label="Вернуться наверх">
+                <img src="content/icons/arrow_up.svg" alt="" aria-hidden="true" />
+            </a>
         </div>
     </body>
 </html>

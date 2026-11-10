@@ -2,17 +2,40 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'PT Sans', sans-serif;
+    overflow-x: hidden;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
 .container {
     width: 100%;
 }
 
 .wrapper {
-    width: min(1200px, 62.5vw);
+    width: min(1200px, calc(100% - 2rem));
     margin: 0 auto;
 }
 
@@ -74,6 +97,14 @@ body {
 .header-search {
     margin-left: 1.6vw;
     padding: 0.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-phone-link {
+    display: flex;
+    align-items: center;
 }
 
 /* --------------------- DESCRIPTION --------------- */
@@ -272,10 +303,11 @@ body {
     margin-bottom: 2.96vh;
 }
 .description-title {
-    font-size: 5.52vh;
-    line-height: 5.93vh;
+    font-size: clamp(2.5rem, 4vw, 5.52vh);
+    line-height: 1.1;
     color: white;
     font-family: 'Gilroy';
+    margin: 0;
 }
 
 .description-company, .description-product {
@@ -300,6 +332,11 @@ body {
     line-height: 1.89vh;
     margin-left: 0.78vw;
     font-family: 'PT Sans';
+}
+
+.description-menu-content {
+    display: flex;
+    align-items: center;
 }
 
 .description-menu-footer {
@@ -500,6 +537,8 @@ body {
 .collections-all {
     margin-top: 2.4vh;
     margin-bottom: 3.5vh;
+    display: inline-flex;
+    align-items: center;
 }
 
 .collections-all > span {
@@ -508,7 +547,6 @@ body {
     line-height: 2.22vh;
     color: #BEBEBE;
     margin-left: 0.78vw;
- 
 }
 
 .collections-img-title {
@@ -672,7 +710,7 @@ body {
 }
 
 .orange-bottom-img {
-    width: 100vw;
+    width: 100%;
     display: block;
 }
 
@@ -723,14 +761,21 @@ body {
 }
 
 .orange-footer-menu-item {
+    display: flex;
+    align-items: center;
     color: #BEBEBE;
     font-family: 'PT Sans';
     font-size: 1.6vh;
     line-height: 2.59vh;
 }
 
-.orange-footer-menu-item > span {
+.orange-footer-menu-item > span,
+.orange-footer-menu-item > a {
     margin-left: 0.78vw;
+}
+
+address {
+    font-style: normal;
 }
 
 
