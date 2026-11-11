@@ -36,6 +36,21 @@ button:focus-visible {
     outline-offset: 4px;
 }
 
+.skip-link {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    padding: 0.75rem 1rem;
+    color: #151716;
+    background: white;
+    transform: translateY(calc(-100% - 1rem));
+}
+
+.skip-link:focus-visible {
+    transform: translateY(0);
+}
+
 .container {
     width: 100%;
 }
