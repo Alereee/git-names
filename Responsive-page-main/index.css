@@ -30,6 +30,12 @@ button {
     cursor: pointer;
 }
 
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #FF7028;
+    outline-offset: 4px;
+}
+
 .container {
     width: 100%;
 }
