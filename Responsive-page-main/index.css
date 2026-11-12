@@ -4,13 +4,14 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 100%;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'PT Sans', sans-serif;
-    overflow-x: hidden;
+    overflow-wrap: anywhere;
 }
 
 img {
@@ -49,6 +50,18 @@ button:focus-visible {
 
 .skip-link:focus-visible {
     transform: translateY(0);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .container {
@@ -104,15 +117,15 @@ button:focus-visible {
 .header-title {
     margin-left: 1.35vw;
     font-family: 'PT Sans';
-    font-size: 1.6vh;
-    line-height: 1.85vh;
+    font-size: 1rem;
+    line-height: 1.25;
 }
 
 .header-phone {
     margin-left: 0.47vw;
     font-family: 'PT Sans';
-    font-size: 1.48vh;
-    line-height: 1.92vh;
+    font-size: 0.95rem;
+    line-height: 1.25;
 }
 
 .header-search {
@@ -167,8 +180,7 @@ button:focus-visible {
     }
 
     .collections-content {
-        margin-left: 18.75vw;
-        margin-right: 3.65vw;
+        margin-left: clamp(1rem, 6vw, 5rem);
     }
 
     .collections-button {
@@ -192,6 +204,7 @@ button:focus-visible {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap: 2rem;
     }
 
     .description-left, .description-right  {
@@ -217,11 +230,11 @@ button:focus-visible {
 
     .description-price {
         top: 40%;
-        left: 30%;
+        left: 10%;
     }
 
     .intro-orange-content {
-        align-items: top;
+        align-items: flex-start;
     }
 
      .description-intro > div  {
@@ -234,17 +247,26 @@ button:focus-visible {
         align-items: center;
     }
 
-    .collections-img > img {
-        max-width: 90%;
+     .collections > * {
+         margin-left: 0;
     }
+
+     .collections-content,
+     .collections-img {
+         width: min(100%, 32rem);
+     }
+
+     .collections-content {
+         margin-right: 0;
+     }
+
+     .collections-img > img {
+         max-width: 90%;
+     }
 
     .collections-button {
 
         position: relative;
-    }
-
-    .goods-items {
-        flex-direction: column;
     }
 
     .good {
@@ -261,6 +283,9 @@ button:focus-visible {
 
     .orange-bottom-text {
         position: relative;
+        width: auto;
+        left: auto;
+        padding: 1.5rem 1rem;
     }
 
 }
@@ -316,7 +341,7 @@ button:focus-visible {
 
 
 .description-menu {
-    max-width: 19.53vw;
+    width: min(100%, 22rem);
     margin-top: 5.37vh;
 }
 
@@ -324,7 +349,7 @@ button:focus-visible {
     margin-bottom: 2.96vh;
 }
 .description-title {
-    font-size: clamp(2.5rem, 4vw, 5.52vh);
+    font-size: clamp(2rem, 4vw, 3.5rem);
     line-height: 1.1;
     color: white;
     font-family: 'Gilroy';
@@ -349,8 +374,8 @@ button:focus-visible {
     margin-left: 0.78vw;
 }
 .description-menu-content > span {
-    font-size: 1.89vh;
-    line-height: 1.89vh;
+    font-size: 1.125rem;
+    line-height: 1.3;
     margin-left: 0.78vw;
     font-family: 'PT Sans';
 }
@@ -375,13 +400,13 @@ button:focus-visible {
 
 .price-button-small {
     padding: 0.74vh;
-    font-size: 1.48vh;
-    line-height: 1.85vh;
+    font-size: 0.875rem;
+    line-height: 1.25;
 }
 
 .price-button-big {
-    font-size: 2.22vh;
-    line-height: 2.22vh;
+    font-size: 1.25rem;
+    line-height: 1.2;
     padding: 1.38vh;
 }
 
@@ -412,8 +437,8 @@ button:focus-visible {
 
 .intro-orange {
     font-family: 'PT Sans';
-    font-size: 1.6vh;
-    line-height: 2.5vh;
+    font-size: 1rem;
+    line-height: 1.6;
 
     color: #151716;
 }
@@ -424,8 +449,8 @@ button:focus-visible {
 }
 
 .intro-first-letter {
-    line-height: 3.98vh;
-    font-size: 5vh;
+    line-height: 1;
+    font-size: 3rem;
 }
 
 .intro-first-title {
@@ -433,7 +458,7 @@ button:focus-visible {
 }
 
 .intro-features {
-    min-width: 20.5vw;
+    min-width: min(100%, 20rem);
 }
 .intro-feature-content-title {
     font-weight: bold;
@@ -450,8 +475,8 @@ button:focus-visible {
 
 .intro-feature-content {
     font-family: 'PT Sans';
-    font-size: 1.38vh;
-    line-height: 1.85vh;
+    font-size: 0.875rem;
+    line-height: 1.4;
     color: #7B7B7B;
     margin-left: 1.48vw;
    
@@ -459,7 +484,8 @@ button:focus-visible {
 
 .intro-feature-content-title {
     color: black!important;
-    font-size: 1.48vh;
+    font-size: 0.95rem;
+    line-height: 1.3;
 }
 
 /* -------------------- PRODUCTS -------------------- */
@@ -473,8 +499,8 @@ button:focus-visible {
 
 .products-title {
     font-family: 'Gilroy';
-    font-size: 2.96vh;
-    line-height: 3.33vh;
+    font-size: 1.5rem;
+    line-height: 1.2;
     color: #151716;
 }
 
@@ -495,7 +521,7 @@ button:focus-visible {
 .product > img {
     width: 100%;
     max-width: 14.95vw;
-    min-width: 180px;
+    min-width: 0;
     display: block;
 }
 
@@ -503,8 +529,8 @@ button:focus-visible {
     color: white;
     font-weight: 700;
     font-family: 'Gilroy';
-    font-size: 1.85vh;
-    line-height: 2.3vh;
+    font-size: 1rem;
+    line-height: 1.3;
     position: absolute;
     bottom: 2.1vh;
     left: 1.25vw;
@@ -514,44 +540,49 @@ button:focus-visible {
 
 .collections {
     display: flex;
+    gap: clamp(1rem, 3vw, 3rem);
 }
 
 .collections > * {
-    margin-left: 2vw;
+    margin-left: 0;
 }
 
 .collections-img > img{
     display: block;
-
     margin: 0 auto;
+    width: 100%;
     max-height: 61.57vh;
+    object-fit: contain;
 }
 
 .collections-img {
     position: relative;
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 
 .collections-content {
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 .collections-top > p {
     color: #BEBEBE;
     font-family: 'PT Sans';
-    font-size: 1.6vh;
-    line-height: 2.59vh;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .collections-title {
     margin-top: 6.21vh;
     font-family: 'Gilroy'!important;
     font-weight: 400!important;
-    font-size: 2.96vh!important;
-    line-height: 3.33vh!important;
+    font-size: 1.5rem!important;
+    line-height: 1.2!important;
     color: white!important;
 }
 
@@ -564,8 +595,8 @@ button:focus-visible {
 
 .collections-all > span {
     font-family: 'PT Sans';
-    font-size: 1.48vh;
-    line-height: 2.22vh;
+    font-size: 0.95rem;
+    line-height: 1.5;
     color: #BEBEBE;
     margin-left: 0.78vw;
 }
@@ -573,8 +604,8 @@ button:focus-visible {
 .collections-img-title {
     font-family: 'PT Sans';
     font-weight: 700;
-    font-size: 1.6vh;
-    line-height: 3.2vh;
+    font-size: 1rem;
+    line-height: 1.5;
     color: white;
     letter-spacing: 2px;
     position: absolute;
@@ -599,13 +630,15 @@ button:focus-visible {
 .goods-title {
     font-family: 'Gilroy';
     font-weight: 400;
-    font-size: 2.96vh;
-    line-height: 3.33vh;
+    font-size: 1.5rem;
+    line-height: 1.2;
     margin-bottom: 1.85vh;
 }
 
 .goods-items {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 1rem;
 }
 .goods-items > * {
     border: 1px solid #ECECEC;
@@ -615,15 +648,16 @@ button:focus-visible {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 0;
 }
 
 .good-img > img {
-    max-height: 17.4vh;
+    max-height: 10rem;
     margin: 1.85vh;
 }
 
 .good-img > .price-button {
-    max-width: 3.125vw;
+    max-width: none;
 }
 .good-img > span {
     margin: 1.1vh;
@@ -637,8 +671,8 @@ button:focus-visible {
 .good-description {
     font-family: 'PT Sans';
     font-weight: 400;
-    font-size: 1.48vh;
-    line-height: 2vh;
+    font-size: 0.95rem;
+    line-height: 1.4;
     margin: 1.85vh;
 }
 
@@ -649,16 +683,16 @@ button:focus-visible {
 }
 
 .good-price-discount {
-    font-size: 1.48vh;
-    line-height: 1.48vh;
+    font-size: 0.875rem;
+    line-height: 1.3;
     color: #A5A5A5;
     text-decoration: line-through;
 }
 
 .good-price-normal {
     color: black!important;
-    font-size: 1.85vh!important;
-    line-height: 1.85vh!important;
+    font-size: 1rem!important;
+    line-height: 1.3!important;
 
 }
 
@@ -668,14 +702,15 @@ button:focus-visible {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    width: min(1200px, calc(100% - 2rem));
 }
 
 .advantages-title {
     margin: 0 auto;
     font-family: 'Gilroy';
     font-weight: 400;
-    font-size: 2.96vh;
-    line-height: 3.33vh;
+    font-size: 1.5rem;
+    line-height: 1.2;
     margin-top: 6.48vh;
     margin-bottom: 5vh;
 }
@@ -685,13 +720,15 @@ button:focus-visible {
     margin-bottom: 7.4vh;
     display: flex;
     justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
 }
 
 .advantage {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    min-width: 0;
 }
 
 .advantage > img {
@@ -709,8 +746,8 @@ button:focus-visible {
 .advantage-title {
     font-family: 'Gilroy';
     font-weight: 400;
-    font-size: 1.85vh;
-    line-height: 2.13vh;
+    font-size: 1rem;
+    line-height: 1.3;
     margin-top: 2.22vh;
 }
 
@@ -718,8 +755,8 @@ button:focus-visible {
     text-align: center;
     font-weight: 400;
     font-family: 'PT Sans';
-    font-size: 1.38vh;
-    line-height: 1.85vh;
+    font-size: 0.875rem;
+    line-height: 1.4;
     margin-top: 1vh;
     color: #7B7B7B;
 }
@@ -746,8 +783,8 @@ button:focus-visible {
     font-family: 'Gilroy';
     padding-top: 3.8vh;
     padding-bottom: 4.35vh;
-    font-size: 2.59vh;
-    line-height: 3.33vh;
+    font-size: clamp(1.125rem, 2vw, 1.75rem);
+    line-height: 1.3;
     font-weight: 400;
 }
 
@@ -755,9 +792,15 @@ button:focus-visible {
 
 .orange-footer {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+    gap: 1.5rem;
 
+}
+
+.orange-footer-item {
+    min-width: 0;
 }
 
 .orange-footer-wrapper {
@@ -769,8 +812,8 @@ button:focus-visible {
     color: white;
     font-weight: 700;
     font-family: 'Gilroy';
-    font-size: 1.48vh;
-    line-height: 1.76vh;
+    font-size: 0.95rem;
+    line-height: 1.3;
 }
 
 .orange-upper-margin {
@@ -786,8 +829,8 @@ button:focus-visible {
     align-items: center;
     color: #BEBEBE;
     font-family: 'PT Sans';
-    font-size: 1.6vh;
-    line-height: 2.59vh;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 .orange-footer-menu-item > span,
@@ -804,8 +847,8 @@ address {
     display: flex;
     justify-content: end;
     color: #747474;
-    font-size: 1.1vh;
-    line-height: 1.3vh;
+    font-size: 0.75rem;
+    line-height: 1.3;
     font-family: 'Roboto';
     align-items: center;
 
@@ -831,9 +874,14 @@ address {
     display: flex;
     justify-content: center;
 }
-.arrow-up > img {
-    margin-top: 3.98vh;
-    margin-bottom: 3.98vh;
+.arrow-up > a {
+    display: block;
+    padding-top: 3.98vh;
+    padding-bottom: 3.98vh;
+}
+
+.arrow-up > a > img {
+    display: block;
 }
 /* --------------------- FONTS --------------------- */
 
