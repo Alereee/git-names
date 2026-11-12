@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="index.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content="Orange — сантехника и мебель для ванной комнаты. Качественные смесители, мебель и фаянс для дома." />
         <title>Сантехника для ванной — Orange</title>
     </head>
@@ -23,14 +23,17 @@
                             <img src="content/icons/iphone(1).svg" alt="" aria-hidden="true" />
                             <span class="header-phone light-gray-1">+7 (905) 543 23 45</span>
                         </a>
-                        <button class="header-search gray-border" type="button" aria-label="Поиск по сайту">
+                        <span class="header-search gray-border" aria-hidden="true">
                             <img src="content/icons/search 1.svg" alt="" aria-hidden="true" />
-                        </button>
+                        </span>
                     </div>
                 </header>
-
-                <main class="description wrapper" id="top" tabindex="-1">
-                    <section class="description-left" id="about" aria-labelledby="hero-title">
+            </div>
+        </div>
+        <main id="top" tabindex="-1">
+            <div class="container dark-gray-back">
+                <section class="description wrapper" aria-labelledby="hero-title">
+                    <div class="description-left" id="about">
                         <div class="description-left-upper">
                             <h1 id="hero-title" class="description-title">
                                 Сантехника и мебель для ванной комнаты
@@ -58,20 +61,18 @@
                                 </div>
                             </nav>
                         </div>
-                        <div class="description-menu-footer" aria-label="Навигационные точки">
+                        <div class="description-menu-footer" aria-hidden="true">
                             <div class="description-menu-footer-item gray-back" aria-hidden="true"></div>
                             <div class="description-menu-footer-item gray-back" aria-hidden="true"></div>
                             <div class="description-menu-footer-item gray-back" aria-hidden="true"></div>
                         </div>
-                    </section>
-                    <div class="description-right" aria-label="Популярный товар">
+                    </div>
+                    <div class="description-right">
                         <div class="description-price price-button price-button-big">от 4 990 ₽</div>
                         <img class="description-tap" src="content/tap1.png" alt="Смеситель Orange в современном дизайне" />
                     </div>
-                </main>
-
+                </section>
             </div>
-        </div>
 
         <section class="container light-gray-back" aria-labelledby="about-company-title">
             <div class="description-intro wrapper">
@@ -86,18 +87,19 @@
                         Мы предлагаем качественную продукцию, которая полностью изготавливается по вашим запросам.
                     </p>
                 </div>
-                <div class="intro-features" id="about-company-title">
+                <div class="intro-features">
+                    <h2 class="visually-hidden" id="about-company-title">О компании</h2>
                     <div class="intro-feature">
                         <img src="content/production.svg" alt="" aria-hidden="true" />
                         <div class="intro-feature-content">
-                            <h2 class="intro-feature-content-title">Собственное производство</h2>
+                            <h3 class="intro-feature-content-title">Собственное производство</h3>
                             <p>Высокий уровень технологий позволяет гарантировать качество продукции на протяжении 10 лет</p>
                         </div>
                     </div>
                     <div class="intro-feature">
                         <img src="content/ecology.svg" alt="" aria-hidden="true" />
                         <div class="intro-feature-content">
-                            <h2 class="intro-feature-content-title">Экологичность и доступность</h2>
+                            <h3 class="intro-feature-content-title">Экологичность и доступность</h3>
                             <p>Уникальный состав сплава делает продукцию Orange безопасной для потребителя</p>
                         </div>
                     </div>
@@ -256,10 +258,12 @@
             </div>
         </section>
 
-        <div class="container light-gray-back orange-bottom" aria-label="Фирменная цитата">
-            <div class="orange-bottom-text">ORANGE — это строгий, тщательно продуманный дизайн<br/> и подлинные немецкие традиции.</div>
+        <section class="container light-gray-back orange-bottom" aria-labelledby="brand-message-title">
+            <h2 class="visually-hidden" id="brand-message-title">О бренде Orange</h2>
+            <div class="orange-bottom-text">ORANGE — это строгий, тщательно продуманный дизайн и подлинные немецкие традиции.</div>
             <img class="orange-bottom-img" src="content/tap2.png" alt="Смеситель Orange на фоне акцентной фотографии" />
-        </div>
+        </section>
+        </main>
 
         <footer class="container dark-gray-back-2" aria-label="Подвал сайта">
             <div class="wrapper orange-footer-wrapper">
@@ -292,10 +296,10 @@
                         </div>
                         <div class="orange-footer-menu-item">
                             <img src="content/icons/Vector.svg" alt="" aria-hidden="true" />
-                            <a href="#top"><span>Контакты</span></a>
+                            <a href="#contacts"><span>Контакты</span></a>
                         </div>
                     </nav>
-                    <address class="orange-footer-item">
+                    <address class="orange-footer-item" id="contacts">
                         <div class="orange-menu-title">Есть вопросы?</div>
                         <div class="orange-footer-menu-item orange-upper-margin">
                             <img src="content/icons/mail.svg" alt="" aria-hidden="true" />
@@ -310,7 +314,7 @@
                         <div class="orange-menu-title">Мы в соцсетях</div>
                         <div class="orange-footer-menu-item orange-upper-margin">
                             <img src="content/icons/social.svg" alt="" aria-hidden="true" />
-                            <a href="#top">@orange_home</a>
+                            <span>@orange_home</span>
                         </div>
                     </div>
                 </div>
