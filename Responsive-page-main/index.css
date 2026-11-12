@@ -7,6 +7,12 @@ html {
     font-size: 100%;
 }
 
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
