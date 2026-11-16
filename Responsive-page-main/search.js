@@ -38,9 +38,7 @@ searchForm.addEventListener("keydown", (event) => {
     }
 });
 
-searchForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-
+function filterSearchResults(shouldScrollToMatch) {
     const query = searchInput.value.trim().toLocaleLowerCase("ru");
     const matches = [];
 
@@ -67,5 +65,14 @@ searchForm.addEventListener("submit", (event) => {
         ? `Найдено карточек: ${matches.length}.`
         : "Ничего не найдено.";
 
-    matches[0]?.scrollIntoView({ block: "center" });
+    if (shouldScrollToMatch) {
+        matches[0]?.scrollIntoView({ block: "center" });
+    }
+}
+
+searchInput.addEventListener("input", () => filterSearchResults(false));
+
+searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    filterSearchResults(true);
 });
