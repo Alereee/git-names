@@ -1,7 +1,17 @@
+const searchDisclosure = document.querySelector(".header-search");
+const searchSummary = searchDisclosure?.querySelector("summary");
 const searchForm = document.querySelector(".header-search-form");
 const searchInput = document.querySelector("#site-search");
 const searchStatus = document.querySelector(".search-status");
 const searchableCards = Array.from(document.querySelectorAll(".product, .good"));
+
+if (!(searchDisclosure instanceof HTMLDetailsElement)) {
+    throw new Error("Не найдено раскрывающееся меню поиска.");
+}
+
+if (!(searchSummary instanceof HTMLElement)) {
+    throw new Error("Не найдена кнопка открытия поиска.");
+}
 
 if (!(searchForm instanceof HTMLFormElement)) {
     throw new Error("Не найдена форма поиска по товарам.");
@@ -14,6 +24,19 @@ if (!(searchInput instanceof HTMLInputElement)) {
 if (!(searchStatus instanceof HTMLElement)) {
     throw new Error("Не найдено сообщение о результатах поиска.");
 }
+
+searchDisclosure.addEventListener("toggle", () => {
+    if (searchDisclosure.open) {
+        searchInput.focus();
+    }
+});
+
+searchForm.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        searchDisclosure.open = false;
+        searchSummary.focus();
+    }
+});
 
 searchForm.addEventListener("submit", (event) => {
     event.preventDefault();
