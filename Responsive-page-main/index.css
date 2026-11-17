@@ -2,6 +2,18 @@
     box-sizing: border-box;
 }
 
+:root {
+    --page-max-width: 1200px;
+    --body-font-size: clamp(1rem, 0.86rem + 0.38vw, 1.125rem);
+    --body-line-height: 1.6;
+    --title-size: clamp(2rem, 1.45rem + 2.25vw, 3.5rem);
+    --section-title-size: clamp(1.5rem, 1.2rem + 0.9vw, 2rem);
+    --label-size: clamp(0.95rem, 0.82rem + 0.35vw, 1.125rem);
+    --small-size: clamp(0.875rem, 0.8rem + 0.2vw, 1rem);
+    --space-sm: clamp(0.75rem, 0.65rem + 0.4vw, 1.25rem);
+    --space-md: clamp(1.25rem, 0.9rem + 1vw, 2rem);
+}
+
 html {
     scroll-behavior: smooth;
     font-size: 100%;
@@ -17,8 +29,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'PT Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
     overflow-wrap: anywhere;
 }
 
@@ -91,8 +103,8 @@ input:focus-visible,
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 3.52vh;
-        padding-bottom: 3.52vh;
+        padding-top: clamp(1rem, 2vw, 2.2rem);
+        padding-bottom: clamp(1rem, 2vw, 2.2rem);
     }
     
     .header-left, .header-right {
@@ -108,8 +120,8 @@ input:focus-visible,
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding-top: 3.52vh;
-        padding-bottom: 3.52vh;
+        padding-top: clamp(1rem, 2vw, 2.2rem);
+        padding-bottom: clamp(1rem, 2vw, 2.2rem);
     }
     
     .header-left, .header-right {
@@ -119,22 +131,43 @@ input:focus-visible,
     }
 
     .header-left > *, .header-right > * {
-        margin-top: 1vh;
-        margin-bottom: 1vh;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .description,
+    .description-intro,
+    .collections,
+    .advantages-items {
+        flex-direction: column;
+    }
+
+    .description-menu {
+        width: 100%;
+    }
+
+    .description-price {
+        position: static;
+        display: inline-flex;
+        margin: 1rem 0 0;
+    }
+
+    .orange-bottom-text {
+        width: min(100%, 30rem);
     }
 }
 
 .header-title {
-    margin-left: 1.35vw;
+    margin-left: clamp(0.5rem, 1vw, 1rem);
     font-family: 'PT Sans';
-    font-size: 1rem;
+    font-size: var(--small-size);
     line-height: 1.25;
 }
 
 .header-phone {
-    margin-left: 0.47vw;
+    margin-left: clamp(0.35rem, 0.8vw, 0.75rem);
     font-family: 'PT Sans';
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 0.75rem + 0.2vw, 1rem);
     line-height: 1.25;
 }
 
@@ -210,16 +243,16 @@ input:focus-visible,
     .description {
         display: flex;
         justify-content: space-between;
-        margin-top: 4.35vh;
+        margin-top: clamp(1rem, 2.8vw, 3rem);
     }
 
     .description-left {
-        padding-top: 4.26vh;
+        padding-top: clamp(1rem, 2.5vw, 2.4rem);
     }
 
     .description-price {
-        top: 28.43vh;
-        left: 6.3vw;
+        top: clamp(7rem, 28vh, 14rem);
+        left: clamp(1rem, 2vw, 2.5rem);
     }
 
     .intro-orange-content {
@@ -228,29 +261,29 @@ input:focus-visible,
 
 
     .description-intro > div {
-        margin-top: 7.59vh;
-        margin-bottom: 7.59vh;
+        margin-top: clamp(1.5rem, 4vw, 4.5rem);
+        margin-bottom: clamp(1.5rem, 4vw, 4.5rem);
     }
 
     .intro-feature {
-        max-width: 13.07vw;
+        max-width: clamp(12rem, 13vw, 17rem);
     }
 
     .intro-orange-content {
-        max-width: 30.73vw;
+        max-width: min(32rem, 100%);
     }
 
     .collections-content {
-        margin-left: clamp(1rem, 6vw, 5rem);
+        margin-left: clamp(1rem, 4vw, 3.5rem);
     }
 
     .collections-button {
-        top: 10.55vh;
-        left: 4.11vw;
+        top: clamp(2.5rem, 8vh, 5rem);
+        left: clamp(1rem, 4vw, 2.5rem);
     }
 
     .advantage {
-        max-width: 14.68vw;
+        max-width: clamp(13rem, 15vw, 17rem);
     }
 
     .orange-bottom-text {
@@ -419,7 +452,7 @@ input:focus-visible,
     margin-bottom: 2.96vh;
 }
 .description-title {
-    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-size: var(--title-size);
     line-height: 1.1;
     color: white;
     font-family: 'Gilroy';
@@ -444,9 +477,9 @@ input:focus-visible,
     margin-left: 0.78vw;
 }
 .description-menu-content > span {
-    font-size: 1.125rem;
+    font-size: var(--label-size);
     line-height: 1.3;
-    margin-left: 0.78vw;
+    margin-left: clamp(0.4rem, 0.8vw, 0.9rem);
     font-family: 'PT Sans';
 }
 
@@ -579,7 +612,7 @@ input:focus-visible,
 
 .products-title {
     font-family: 'Gilroy';
-    font-size: 1.5rem;
+    font-size: var(--section-title-size);
     line-height: 1.2;
     color: #151716;
 }
@@ -659,15 +692,15 @@ input:focus-visible,
 .collections-top > p {
     color: #BEBEBE;
     font-family: 'PT Sans';
-    font-size: 1rem;
+    font-size: var(--body-font-size);
     line-height: 1.6;
 }
 
 .collections-title {
-    margin-top: 6.21vh;
+    margin-top: clamp(2rem, 5vw, 4rem);
     font-family: 'Gilroy'!important;
     font-weight: 400!important;
-    font-size: 1.5rem!important;
+    font-size: var(--section-title-size)!important;
     line-height: 1.2!important;
     color: white!important;
 }
@@ -865,13 +898,14 @@ input:focus-visible,
     text-align: center;
     color: white;
     bottom: 0;
-    left: 18.5vw;
-    width: 63vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(63vw, 62rem);
     background-color: #F6761A;
     font-family: 'Gilroy';
-    padding-top: 3.8vh;
-    padding-bottom: 4.35vh;
-    font-size: clamp(1.125rem, 2vw, 1.75rem);
+    padding-top: clamp(1.25rem, 2vw, 2rem);
+    padding-bottom: clamp(1.25rem, 2vw, 2rem);
+    font-size: clamp(1.125rem, 1.4rem + 0.6vw, 1.75rem);
     line-height: 1.3;
     font-weight: 400;
 }
