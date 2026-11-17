@@ -26,7 +26,10 @@ if (!(searchStatus instanceof HTMLElement)) {
 }
 
 searchDisclosure.addEventListener("toggle", () => {
-    if (searchDisclosure.open) {
+    const isOpen = searchDisclosure.open;
+    searchSummary.setAttribute("aria-expanded", String(isOpen));
+
+    if (isOpen) {
         searchInput.focus();
     }
 });

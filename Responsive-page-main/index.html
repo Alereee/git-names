@@ -23,14 +23,14 @@
                             <img src="content/icons/iphone(1).svg" alt="" aria-hidden="true" />
                             <span class="header-phone light-gray-1">+7 (905) 543 23 45</span>
                         </a>
-                        <details class="header-search gray-border">
-                            <summary aria-label="Открыть поиск по товарам">
+                        <details class="header-search gray-border" aria-label="Поиск по товарам">
+                            <summary aria-label="Открыть поиск по товарам" aria-controls="site-search-panel" aria-expanded="false">
                                 <img src="content/icons/search 1.svg" alt="" aria-hidden="true" />
                             </summary>
-                            <form class="header-search-form" role="search">
+                            <form class="header-search-form" id="site-search-panel" role="search" aria-label="Поиск по товарам">
                                 <label class="visually-hidden" for="site-search">Поиск по товарам</label>
                                 <input id="site-search" name="q" type="search" autocomplete="off" placeholder="Название товара" />
-                                <button type="submit">Найти</button>
+                                <button type="submit" aria-label="Найти товар">Найти</button>
                                 <p class="search-status" role="status" aria-live="polite"></p>
                             </form>
                         </details>
