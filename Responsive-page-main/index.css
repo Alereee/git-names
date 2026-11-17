@@ -403,14 +403,6 @@ input:focus-visible,
         gap: 1.5rem;
     }
 
-    .products {
-        justify-content: center;
-    }
-
-    .product {
-        flex-basis: 100%;
-    }
-
     .product > img {
         max-width: 100%;
         min-width: 0;
