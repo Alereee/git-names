@@ -158,7 +158,7 @@ input:focus-visible,
 }
 
 .header-title {
-    margin-left: clamp(0.5rem, 1vw, 1rem);
+    margin: 0 0 0 clamp(0.5rem, 1vw, 1rem);
     font-family: 'PT Sans';
     font-size: var(--small-size);
     line-height: 1.25;
