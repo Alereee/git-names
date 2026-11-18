@@ -668,6 +668,7 @@ input:focus-visible,
     position: relative;
     flex: 1 1 0;
     min-width: 0;
+    margin: 0;
 }
 
 
@@ -776,6 +777,7 @@ input:focus-visible,
 .good-img {
     display: flex;
     align-items: start;
+    margin: 0;
 }
 
 .good-description {
