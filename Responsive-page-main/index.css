@@ -222,7 +222,7 @@ input:focus-visible,
 .search-status {
     flex-basis: 100%;
     margin: 0;
-    font-size: 0.875rem;
+    font-size: var(--small-size);
     line-height: 1.4;
 }
 
@@ -495,12 +495,12 @@ input:focus-visible,
 
 .price-button-small {
     padding: 0.5rem 0.65rem;
-    font-size: 0.875rem;
+    font-size: var(--small-size);
     line-height: 1.25;
 }
 
 .price-button-big {
-    font-size: 1.25rem;
+    font-size: clamp(1.125rem, 1rem + 0.25vw, 1.25rem);
     line-height: 1.2;
     padding: 0.75rem 1rem;
 }
@@ -580,7 +580,7 @@ input:focus-visible,
 
 .intro-feature-content {
     font-family: 'PT Sans';
-    font-size: 0.875rem;
+    font-size: var(--small-size);
     line-height: 1.4;
     color: #7B7B7B;
     margin-left: 1.48vw;
@@ -589,7 +589,7 @@ input:focus-visible,
 
 .intro-feature-content-title {
     color: black!important;
-    font-size: 0.95rem;
+    font-size: var(--label-size);
     line-height: 1.3;
 }
 
@@ -741,7 +741,7 @@ input:focus-visible,
 .goods-title {
     font-family: 'Gilroy';
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: var(--section-title-size);
     line-height: 1.2;
     margin-bottom: 1.85vh;
 }
@@ -783,7 +783,7 @@ input:focus-visible,
 .good-description {
     font-family: 'PT Sans';
     font-weight: 400;
-    font-size: 0.95rem;
+    font-size: var(--label-size);
     line-height: 1.4;
     margin: 1.85vh;
     overflow-wrap: anywhere;
