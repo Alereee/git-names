@@ -233,6 +233,13 @@ input:focus-visible,
 .header-phone-link {
     display: flex;
     align-items: center;
+    min-height: 2.75rem;
+}
+
+.header-left > a {
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
 }
 
 /* --------------------- DESCRIPTION --------------- */
@@ -478,6 +485,7 @@ input:focus-visible,
 .description-menu-content {
     display: flex;
     align-items: center;
+    min-height: 2.75rem;
 }
 
 .description-menu-footer {
@@ -701,6 +709,7 @@ input:focus-visible,
     margin-bottom: 3.5vh;
     display: inline-flex;
     align-items: center;
+    min-height: 2.75rem;
 }
 
 .collections-all > span {
@@ -947,8 +956,14 @@ input:focus-visible,
     line-height: 1.5;
 }
 
-.orange-footer-menu-item > span,
+.orange-footer-menu-item > span {
+    margin-left: 0.78vw;
+}
+
 .orange-footer-menu-item > a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
     margin-left: 0.78vw;
 }
 
@@ -990,7 +1005,9 @@ address {
     justify-content: center;
 }
 .arrow-up > a {
-    display: block;
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
     padding-top: 3.98vh;
     padding-bottom: 3.98vh;
 }
