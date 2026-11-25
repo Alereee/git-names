@@ -820,7 +820,7 @@ input:focus-visible,
     margin: 0 auto;
     font-family: 'Gilroy';
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: var(--section-title-size);
     line-height: 1.2;
     margin-top: 6.48vh;
     margin-bottom: 5vh;
