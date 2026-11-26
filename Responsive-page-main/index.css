@@ -388,6 +388,43 @@ input:focus-visible,
 
 }
 
+@media (max-width: 360px) {
+    .wrapper,
+    .advantages {
+        width: calc(100% - 1.25rem);
+    }
+
+    .header-phone {
+        font-size: 0.85rem;
+        overflow-wrap: anywhere;
+    }
+
+    .products,
+    .goods-items {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .collections-img-title {
+        top: 0.75rem;
+        left: 0.75rem;
+    }
+
+    .collections-all,
+    .good-description,
+    .good-price {
+        overflow-wrap: anywhere;
+    }
+
+    .good-img > img {
+        max-width: calc(100% - 1rem);
+        max-height: 8.5rem;
+    }
+
+    .orange-copyright {
+        justify-content: flex-start;
+    }
+}
+
 @media (max-width: 660px) {
     .header-search-form {
         right: 50%;
@@ -515,7 +552,7 @@ input:focus-visible,
 }
 
 .description-tap {
-    max-height: min(32rem, 52vh);
+    max-height: 32rem;
     display: block;
 }
 
@@ -654,7 +691,7 @@ input:focus-visible,
     display: block;
     margin: 0 auto;
     width: 100%;
-    max-height: min(38rem, 62vh);
+    max-height: 38rem;
     object-fit: contain;
 }
 
@@ -843,7 +880,7 @@ input:focus-visible,
 }
 
 .advantage > img {
-    max-height: 8.3vh;
+    max-height: 8rem;
 }
 
 .advantage-lower {
