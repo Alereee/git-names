@@ -31,7 +31,20 @@ body {
     font-family: 'PT Sans', sans-serif;
     font-size: var(--body-font-size);
     line-height: var(--body-line-height);
+    max-width: 100%;
     overflow-wrap: anywhere;
+}
+
+main,
+header,
+footer,
+section,
+article,
+aside,
+figure,
+nav,
+address {
+    min-width: 0;
 }
 
 img {
@@ -392,6 +405,16 @@ input:focus-visible,
     .wrapper,
     .advantages {
         width: calc(100% - 1.25rem);
+    }
+
+    .header-left,
+    .header-right,
+    .description-right,
+    .collections-content,
+    .collections-img,
+    .orange-footer-item {
+        width: 100%;
+        max-width: 100%;
     }
 
     .header-phone {
